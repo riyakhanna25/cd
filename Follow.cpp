@@ -1,3 +1,15 @@
+Aim: Write a program in C/C++ to find a FOLLOW set from a given set of production rule.
+
+Algorithm:
+1.	Declare the variables.
+2.	Enter the production rules for the grammar.
+3.	Calculate the FOLLOW set for each element call the user defined function follow().
+4.	If x->aBb
+a.	If x is start symbol then FOLLOW(x)={$}.
+b.	If b is NULL then FOLLOW(B)=FOLLOW(x).
+c.	If b is not NULL then FOLLOW(B)=FIRST(b). END.
+
+ 
 #include<stdio.h>
  #include<string.h> 
  #include<ctype.h> 
