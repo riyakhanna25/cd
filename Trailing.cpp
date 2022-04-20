@@ -1,3 +1,23 @@
+
+
+Aim: Write a program in C/C++ or Java to detect the trailing edges of the given set ofproductions of a grammar.
+
+Algorithm:
+1.	Start the program.
+2.	Get the Set of Productions for the grammar from the user. No redundant & cyclicproductions must be given.
+3.	Reverse each input productions and print it.
+4.	The conditions to be checked according to the reversed inputs are:Conditions	Inclusions in result
+S->Sa	add a
+S->Aa	add a, production of A
+S->ab	add a
+S->AB	Production of A
+S->SA	none
+S->a	take a
+S->SA*	none taken
+S->*a	take * leave a
+5.	Print the Trailing edges.
+6.	Stop the program.
+
 #include<iostream>
 #include<conio.h>
 #include<stdio.h>
