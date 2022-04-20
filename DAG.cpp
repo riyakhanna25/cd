@@ -1,3 +1,20 @@
+There are three possible scenarios for building a DAG on three address codes:
+Case 1 –  x = y op z
+Case 2 – x = op y
+Case 3  –  x = y
+Directed Acyclic Graph for the above cases can be built as follows :
+Step 1 – 
+If the y operand is not defined, then create a node (y).
+If the z operand is not defined, create a node for case(1) as node(z).
+Step 2 – 
+Create node(OP) for case(1), with node(z) as its right child and node(OP) as its left child (y).
+For the case (2), see if there is a node operator (OP) with one child node (y).
+Node n will be node(y)  in case (3).
+Step 3 – 
+Remove x from the list of node identifiers.
+Add x to the list of attached identifiers for node n.
+
+
 #include<iostream>
 #include<string>
 using namespace std;
