@@ -1,4 +1,36 @@
- #include<bits/stdc++.h>
+
+Aim: Write a program in C/C++ to find the FIRST set for a given set of production rule of a grammar.
+
+Algorithm:
+Procedure First
+1.	Input the number of production N.
+2.	Input all the production rule PArray
+3.	Repeat steps a, b, c until process all input production rule i.e. PArray[N]
+a.	If Xi ≠ Xi+1 then
+i.	Print Result array of Xi which contain FIRST(Xi)
+b.	If first element of Xi of PArray is Terminal or ε Then
+i.	Add Result = Result U first element
+c.	If first element of Xi of PArray is Non-Terminal Then
+i.	searchFirst(i, PArray, N)
+4.	End Loop
+5.	If N (last production) then
+a.	Print Result array of Xi which contain FIRST(Xi)
+6.	End
+
+Procedure searchFirst(i, PArray, N)
+1.	Repeat steps Loop j=i+1 to N
+a.	If first element of Xj of PArray is Non-Terminal Then
+i.	searchFirst(j, of PArray, N)
+b.	If first element of Xj of PArray is Terminal or ε Then
+i.	Add Result = Result U first element
+ii.	Flag=0
+2.	End Loop
+3.	If Flag = 0 Then
+a.	Print Result array of Xj which contain FIRST(Xj)
+4.	End
+
+
+#include<bits/stdc++.h>
  using namespace std;
 
 void searchFirst(int n, int i, char pl[], char r[], char result[], int k)
