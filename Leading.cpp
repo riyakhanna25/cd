@@ -1,3 +1,23 @@
+Aim: Write a program in C/C++ to detect the leading edges of the given set of productionsof a grammar.
+
+Algorithm:
+1.	Start the program.
+2.	Get the Set of Productions for the grammar from the user. No redundant & cyclicproductions must be given.
+3.	The conditions to be checked are:
+Conditions	Inclusions in resultS-
+>Sa	add a
+S->Aa	add a, production of A
+S->ab	add a
+S->AB	Production of A
+S->SA	none
+S->a	take a
+S->SA*	none taken
+S->*a	take * leave a
+4.	Print the Leading edges.
+5.	Stop the program.
+
+
+
 #include<iostream>
 #include<conio.h>
 #include<stdio.h>
