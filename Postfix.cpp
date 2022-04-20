@@ -1,3 +1,21 @@
+Aim: Write a program in C/C++ or Java to generate Intermediate Code (Postfix Expression) from given syntax tree.
+
+Algorithm:
+1.	Declare a set of operators.
+2.	Initialize an empty stack.
+3.	To convert INFIX to POSTFIX follow the following steps
+4.	Scan the infix expression from left to right.
+5.	If the scanned character is an operand, output it.
+6.	Else, If the precedence of the scanned operator is greater than the precedence of the operator in the stack or the stack is empty or the stack contains a "('), push it.
+7.	Else, Pop all the operators from the stack which are greater than or equal to in precedence than that of the scanned operator. After doing that Push the scanned operator to the stack.
+8.	If the scanned character is an "(', push it to the stack.
+9.	If the scanned character is an *)', pop the stack and output it until a *(' is encountered, and discards both parentheses.
+10.	Pop and output from the stack until it is not empty.
+
+
+
+
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<ctype.h>
